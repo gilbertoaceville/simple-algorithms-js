@@ -1,0 +1,42 @@
+input[type=text]{
+    height: auto;
+}
+
+#page {
+    counter-reset: heading;
+  }
+
+h1::before {
+    content: counter(heading);
+    counter-increment: heading;
+}
+
+h1 {
+    counter-reset: subheading;
+}
+
+h2::before {
+    content: counter(heading)"."counter(subheading);
+    counter-increment: subheading;
+}
+
+/* GET all a href that starts with https */
+a[href^="https"]{
+
+}
+
+/* GET all a href that ends with .pdf */
+a[href$=".pdf"]{
+
+}
+
+/* GET all a href that has a substring of css */
+a[href*="css"]{
+    background-attachment: fixed;
+}
+
+div, p - Selects all <div> elements and all <p> elements
+div p - Selects all <p> elements that are anywhere inside a <div> element
+div > p - Selects all <p> elements where the immediate parent is a <div> element
+div + p - Selects all <p> elements that are placed immediately after a <div> element
+div ~ p - Selects all <p> elements that are anywhere preceded by a <div> element
